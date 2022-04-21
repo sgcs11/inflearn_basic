@@ -37,9 +37,9 @@ public class HelloController {
     }
 
     @GetMapping("/xml-format")
-    public String xmlTest() {
-        xmlTest root = new xmlTest("test");
-        return "xml-test";
+    public xmlTest xmlTest() {
+        xmlTest xmltest = new xmlTest("test");
+        return xmltest;
     }
 
     static class Hello {
