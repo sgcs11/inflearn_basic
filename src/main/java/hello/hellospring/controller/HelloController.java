@@ -1,5 +1,6 @@
 package hello.hellospring.controller;
 
+import hello.hellospring.xml.xmlTest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,6 +34,12 @@ public class HelloController {
         Hello hello = new Hello();
         hello.setName(name);
         return hello;
+    }
+
+    @GetMapping("/xml-format")
+    public String xmlTest() {
+        xmlTest root = new xmlTest("test");
+        return "xml-test";
     }
 
     static class Hello {
