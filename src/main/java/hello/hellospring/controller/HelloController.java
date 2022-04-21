@@ -37,6 +37,7 @@ public class HelloController {
     }
 
     @GetMapping("/xml-format")
+    @ResponseBody
     public xmlTest xmlTest() {
         xmlTest xmltest = new xmlTest("test");
         return xmltest;
